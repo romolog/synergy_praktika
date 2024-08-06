@@ -1,0 +1,236 @@
+
+/* RESET DEFAULTS *//* RESET DEFAULTS *//* RESET DEFAULTS *//* RESET DEFAULTS *//* RESET DEFAULTS */
+*, *::before, *::after {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none; /* remove bullets */  
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input, 
+button {
+    border: none;
+    font: inherit;
+}
+
+
+/*BASIC STYLE*//*BASIC STYLE*//*BASIC STYLE*//*BASIC STYLE*//*BASIC STYLE*//*BASIC STYLE*/
+:root { /* higher priority than html-tag */ 
+    --colorWhiteTransp: rgba(255, 255, 255, 0.75);
+    --colorBrand: rgba(128, 135, 107);    
+    --colorBrandDark: rgb(78, 85, 57); 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Verdana, sans-serif; 
+    color: white;    
+
+    padding-top: 3dvh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    height: 97dvh;
+
+    background-color: whitesmoke;
+    overflow: clip;   
+    
+    position: relative;
+}
+
+/*HEADER STYLE*//*HEADER STYLE*//*HEADER STYLE*//*HEADER STYLE*//*HEADER STYLE*/
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 90dvw;
+    margin: 0 auto; /* centering by shorthand margin: top&bottom = 0 left&right = auto*/
+    margin-bottom: 0dvh;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.navList {
+
+    
+    display: flex;
+}
+
+.navLink {
+    text-decoration: none;  /* remove link-decoration blue color */
+    animation: fade-in 4s ease-in-out 0s 1 normal none;
+    color: var(--colorWhiteTransp);
+    font-weight: 300;
+    font-size: 2rem;
+   
+    margin-left: 2dvw;
+    margin-right: 2dvw;
+
+    transition: all 0.5s; /* smoothness - for ALL properties any change will take 0.5 sec */
+}
+
+.navLink:hover {
+    color: rgba(255, 255, 255, 1.0); /* non-transparent when hooved */
+}
+
+/*MAIN STYLE*//*MAIN STYLE*//*MAIN STYLE*//*MAIN STYLE*//*MAIN STYLE*//*MAIN STYLE*/
+
+.dogsCarouselButton:hover {
+    color: var(--colorBrand);
+    box-shadow: 0 0.5dvh 1.5dvh grey;
+}
+
+.dogsBackgroundImage {
+    position: absolute;
+    z-index: -1;
+    rotate: -3deg;
+    translate: -10dvw -10dvh;
+
+    width: 110dvw;
+}
+
+.navLink:hover {
+    color: rgba(255, 255, 255, 1.0); /* non-transparent when hooved */
+}
+
+.dogsMain {
+    background-color: white;
+    box-shadow: 0 0.5dvh 1.5dvh grey;
+
+    width: 70dvw;
+
+    border-radius: 1dvh;
+    margin: 0 auto;
+}
+
+
+.carousel {
+    position: relative;
+
+    width: 80%;
+    height: 75dvh;
+
+    margin: 0 auto;
+}
+
+.dogsPhotoUl {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    
+    height: 100%;
+    width: 100%;
+
+
+    inset: 0; /* distance to parent relative element*/
+    opacity: 0.00;
+}
+
+.slide[data-current] {
+    opacity: 1.0;
+    display: flex;
+    justify-content: center;
+}
+
+.dogsPhotoImg {
+    height: 100%;
+    /* width: 100%; */
+    /* object-fit: cover; */
+    /* object-position: center; */
+}
+
+.dogsCarouselButton {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 0rem;
+    border: none;
+    border-radius: 5000rem;
+
+    font-size: 4rem;
+    
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: var(--colorBrandDark);
+    cursor: pointer;
+}
+
+.dogsCarouselButton.left {
+    left: -5rem;    
+}
+.dogsCarouselButton.right {
+    right: -5rem;    
+}
+.dogsPhotoDescription {
+    width: 23%;
+    margin: auto;
+    margin-top: 0.5dvh;
+    color: var(--colorBrandDark);
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+
+.dogsFooter {
+    font-weight: 300;
+    font-size: 1rem;
+
+    color: rgb(40, 40, 40);
+    opacity: 1;
+    
+    margin-top: 0dvh;
+    margin-bottom: 1dvh;
+    z-index: 10;
+    width: 90dvw;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 1dvh;
+    border-width: 0.3dvh;
+    border-top: 0.3dvh solid var(--colorBrandDark);
+
+    display: flex;
+    justify-content: space-between;
+}
+

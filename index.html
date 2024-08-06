@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla JS "карусель" от Романа Пономарева в рамках практики в Синергии</title>
+
+    <!-- add favicon -->
+    <link rel="icon" href="./assets/pics/Favicon.jpg">
+
+    <!-- add CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- add JS and also a notation for the case, when JS is switched off -->
+    <noscript>Пожалуйста, включите JavaScript, чтобы все заработало</noscript>
+    <script defer src="./js/main.js"></script>
+    
+</head>
+<body class="dogsBody">   
+    <header class="dogsHeader">
+        <img class="dogsBackgroundImage" src="./assets/pics/DogsBackground.jpg" alt="Photo by Jonathan Cooper on Unsplash">
+        
+        <nav>            
+            <ul class="navList">
+                <li>
+                    <p class="navLink">
+                        Роман Пономарев, практика Синергия, Vanilla JS "карусель"
+                    </p>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dogsMain">
+        <section class="carousel" data-carousel>
+        <!-- <div class="dogsPhotoDiv"> -->
+            <button class="dogsCarouselButton left" id="lbtn">
+                &lArr;
+            </button>
+
+            <button class="dogsCarouselButton right" id="rbtn">
+                &rArr;
+            </button>
+            
+            <ul class="dogsPhotoUl" data-slides>
+                <li class="slide" data-current>
+                    <img src="./assets/pics/Dogs/Dog_1.jpg" alt="Photo of dog 1" class="dogsPhotoImg">
+                </li>
+                <li class="slide">
+                    <img src="./assets/pics/Dogs/Dog_2.jpg" alt="Photo of dog 2" class="dogsPhotoImg">
+                </li>
+                <li class="slide">
+                    <img src="./assets/pics/Dogs/Dog_3.jpg" alt="Photo of dog 3" class="dogsPhotoImg">
+                </li>
+                <li class="slide">
+                    <img src="./assets/pics/Dogs/Dog_4.jpg" alt="Photo of dog 4" class="dogsPhotoImg">
+                </li>
+            </ul>
+            <div class = "dogsPhotoDescription">
+                Изображение <div id = "dogsPhotoIndex">1</div> из 4
+            </div>
+        <!-- </div> -->
+        </section>
+    </main>
+
+    <footer class="dogsFooter">
+        <p> &copy; 2024. Copyright by Roman Ponomarev </p>
+        <p>
+            1159649/23 группа ОБИ-32309МОвр
+        </p>
+    </footer>
+
+</body>
+</html>
